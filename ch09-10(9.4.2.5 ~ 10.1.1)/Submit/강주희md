@@ -1,0 +1,22 @@
+# 2024년도
+## Season4 3주차 Real MySQL 문제
+#### 출제자: 안해원
+
+### 1. 다음 쿼리문을 보고 JOIN이 실행되는 테이블을 순서대로 적으시오
+```
+SELECT /*+ JOIN_FIXED_ORDER() */ *
+FROM employees e
+    INNER JOIN dept_emp de ON de.emp_no = e.emp_no 
+    INNER JOIN departments d ON d.dept_no = de.dept_no
+
+```
+
+답: employees, dept_emp, departments
+
+### 2.다음 설명중 틀린것을 고르시오
+- 가. MYSQL옵티마이저에서는 ICP 힌트를 제공하지 않는다.
+- 나. 인덱스 스킵 스캔의 성능을 향상시키려면 조건이 누락된 선행 칼럼이 가지는 유니크한 값의 갰가 많아야한다.
+- 다. 옵티마이저 힌트에는 테이블명과 인덱스 이름을 함께 명시해야 한다.
+- 라. MYSQL 서버에서 조인 조건이 되는 칼럼의 인덱스가 적절히 준비되어 있다면, 해시 조인은 거의 사용되지 않는다.
+
+답: 나
