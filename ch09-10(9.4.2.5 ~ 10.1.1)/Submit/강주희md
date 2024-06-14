@@ -8,7 +8,6 @@ SELECT /*+ JOIN_FIXED_ORDER() */ *
 FROM employees e
     INNER JOIN dept_emp de ON de.emp_no = e.emp_no 
     INNER JOIN departments d ON d.dept_no = de.dept_no
-
 ```
 
 답: employees, dept_emp, departments
